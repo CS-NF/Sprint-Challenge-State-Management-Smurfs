@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import "./App.css";
 
-
+import GetContext from "./contexts/GetContext"; 
+import PostContext from "./contexts/PostContext"; 
 
  function App() {
     return (

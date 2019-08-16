@@ -1,5 +1,6 @@
-import { createContext } from "react"; \
+import { createContext } from "react"; 
 
-const CartContext = createContext(); 
+const GetContext = createContext(); 
+console.log(GetContext.Provider)
 
 export default CartContext; 
