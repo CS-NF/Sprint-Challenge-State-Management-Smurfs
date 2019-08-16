@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import "./App.css";
-import GetSumrfs from "./GetSumrfs.js"; 
+import GetSmurfs from "../components/GetSmurfs.js"; 
 import GetContext from "../contexts/GetContext.js"; 
 
 
  function App() {
 
-const [getSmurfs, setGetSmurfs] = useState(); 
-
+const [getSmurfs, setGetSmurfs] = useState([]); 
+console.log(getSmurfs)
+const [postSmurfs, setPostSmurfs] = useState([]);
     return (
       <div className="App">
         <h1>SMURFS! 2.0 W/ Redux</h1>
@@ -17,7 +18,7 @@ const [getSmurfs, setGetSmurfs] = useState();
 
         <div>
           <GetContext.Provider  value={{getSmurfs}}> 
-            <GetSumrfs /> 
+            <GetSmurfs setGetSmurfs={setGetSmurfs}/> 
           </GetContext.Provider>
         </div> 
       </div>

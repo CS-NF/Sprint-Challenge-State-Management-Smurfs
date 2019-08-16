@@ -1,6 +1,6 @@
-import { createContext } from "react"
+import { createContext } from "react"; 
 
 const PostContext = createContext(); 
-console.log(PostContext.Provider)
+console.log("This is Context", PostContext.Provider)
 
 export default PostContext; 

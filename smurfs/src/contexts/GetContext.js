@@ -1,6 +1,6 @@
 import { createContext } from "react"; 
 
 const GetContext = createContext(); 
-console.log(GetContext.Provider)
+console.log("This is Context", GetContext.Provider)
 
 export default GetContext; 
