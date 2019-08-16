@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import GetSumrfs from "./GetSumrfs.js"; 
 import GetContext from "../contexts/GetContext.js"; 
-import PostContext from "../contexts/PostContext.js"; 
+
 
  function App() {
 
@@ -15,11 +15,11 @@ const [getSmurfs, setGetSmurfs] = useState();
         <div>Start inside of your `src/index.js` file!</div>
         <div>Have fun!</div>
 
-        <dv>
-          <GetContext.Provider> 
+        <div>
+          <GetContext.Provider  value={{getSmurfs}}> 
             <GetSumrfs /> 
           </GetContext.Provider>
-        </dv> 
+        </div> 
       </div>
     );
 }
