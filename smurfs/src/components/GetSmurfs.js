@@ -3,17 +3,16 @@ import GetContext from "../contexts/GetContext";
 import axios from "axios"; 
 import TheSmurfs from "./TheSumrfs.js"; 
 
-const GetSmurfs = (props) => {
+const GetSmurfs = () => {
     
-    const  { getSmurfs }  = useContext(GetContext)
-    console.log(getSmurfs)
+    const  { smurfs, setSmurfs }   = useContext(GetContext)
 
     useEffect(() => {
         axios 
         .get("http://localhost:3333/smurfs")
-        .then(item => {
-            console.log(item)
-            props.setGetSmurfs(item.data)
+        .then(res => {
+            console.log(res)
+            setSmurfs(res.data)
         })
         .catch(error => {
             console.log("ERROR", error)
@@ -22,7 +21,7 @@ const GetSmurfs = (props) => {
     
     return(
         <div> 
-          {getSmurfs.map(item => (
+          {smurfs.map(item => (
             <TheSmurfs key={item.id} name={ item.name} age={ item.age } height={ item.height } /> 
         ))} 
         </div>
